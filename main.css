@@ -1,0 +1,173 @@
+:root{
+  --main-color : #2196f3;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+.name{
+  text-align: center;
+  color: white;
+  background-color: var(--main-color);
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.message {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+.message span{
+font-weight: bold;
+color: #009688;
+}
+.message span::before{
+content: "[ ";
+}
+.message span::after{
+content: " ]";
+}
+.start {
+  font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: #009688;
+    cursor: pointer;
+}
+.select {
+
+  box-shadow: 0 0 2px 1px var(--main-color);
+  margin: 0 auto 0;
+  font-size: 18px;
+  background-color:#f44336;
+  border: none;
+  font-weight:500;
+  color: white;
+  padding: 5px 120px 5px 2px;
+  outline: none;
+
+}
+.custom { 
+  display: flex;
+  justify-content: center;
+}
+.custom-select {
+  position: relative;
+  margin-top: 10px;
+}
+.custom-arrow {
+  position: absolute;
+  background-color: #c42317;
+  width: 30px;
+  height: 100%;
+  top:0;
+  right: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.custom-arrow::after,
+.custom-arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.custom-arrow::before {
+  border: 7px solid;
+  top: 70%;
+  
+  border-color: #514a4a transparent transparent transparent;
+}
+.custom-arrow::after {
+  top: 20%;
+  border: 7px solid;
+  border-color: transparent transparent #830000 transparent;
+}
+.the-word {
+  text-align: center;
+  font-size: 60px;
+  color: var(--main-color);
+  font-weight: bold;
+  user-select: none;
+}
+
+.input {
+  margin: 15px 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.input:focus {
+  outline: none;
+}
+
+.upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.upcoming-words div{
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  margin: 4px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+}
+.control span{
+font-weight: bold;
+color: #009688;
+}
+
+.finish{
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.finish .good{
+color: var(--main-color);
+}
+.finish .bad{
+  color: red;
+}
